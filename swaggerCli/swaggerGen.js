@@ -158,3 +158,8 @@ function convert({ inJSON, configuration }) {
 
   return format(outSwagger, configuration.yamlOut);
 }
+
+
+module.exports = {
+  convert
+}
