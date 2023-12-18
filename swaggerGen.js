@@ -158,23 +158,3 @@ function convert({ inJSON, configuration }) {
 
   return format(outSwagger, configuration.yamlOut);
 }
-
-function performAction() {
-  const configuration = {
-    noInt: document.getElementById("noInt").checked,
-    requestExamples: document.getElementById("requestExamples").checked,
-    nullType: document.getElementById("nullType").value,
-    yamlOut: document.getElementById("yamlOut").checked,
-  };
-  const inJSON = document.getElementById("JSON").value;
-  const output = convert({ inJSON, configuration });
-  document.getElementById("Swagger").value = output;
-}
-
-window.addEventListener("load", (event) => {
-  const convert = document.getElementById("convert");
-  convert.addEventListener("click", () => {
-    console.log("hello");
-    performAction();
-  });
-});
