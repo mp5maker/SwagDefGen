@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate:json": "node index.js --yamlOut='n'",
-    "generate:yaml": "node index.js --yamlOut='y'"
+    "generate:yaml": "node index.js --yamlOut='y'",
+    "generate:docstring": "node index.js --yamlOut='y' --docstring='y'"
   },
   "keywords": [],
   "author": "",
