@@ -1,7 +1,7 @@
 function convert({ inJSON, configuration }) {
-  let outSwagger = undefined;
-  let tabCount = undefined;
-  let indentator = undefined;
+  let outSwagger = configuration.outSwagger ?? '"definitions": {';
+  let tabCount = configuration.tabCount ?? 0;
+  let indentator = configuration.indentator ?? "\n";
 
   function changeIndentation(count) {
     let i;
@@ -143,9 +143,6 @@ function convert({ inJSON, configuration }) {
     return;
   }
 
-  tabCount = 0;
-  indentator = "\n";
-  outSwagger = '"definitions": {';
   changeIndentation(1);
   for (var obj in inJSON) {
     outSwagger += indentator + '"' + obj + '": {';
